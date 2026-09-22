@@ -1,18 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="Brigitte Morta's responsive personal portfolio showcasing her skills, projects, and journey as an aspiring full-stack web developer."
+      content="Brigitte Morta — Full-Stack Web Developer portfolio featuring selected projects, technical skills, and professional background."
     />
-    <title>Brigitte Morta | Portfolio</title>
+    <meta name="author" content="Brigitte Morta" />
+    <meta name="theme-color" content="#080b1a" />
 
-    <!-- Favicon -->
+    <meta
+      property="og:title"
+      content="Brigitte Morta | Full-Stack Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Brigitte Morta, a Full-Stack Web Developer building responsive, user-focused web experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://bmorta.github.io/brigitte-morta/"
+    />
+    <meta
+      property="og:image"
+      content="https://bmorta.github.io/brigitte-morta/images/portfolio-preview.png"
+    />
+
+    <title>Brigitte Morta | Full-Stack Web Developer</title>
+
     <link rel="icon" type="image/png" href="images/logo.png" />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,63 +52,72 @@
   </head>
 
   <body>
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+    <!-- Animated background -->
+    <div class="page-background" aria-hidden="true">
+      <span class="grid-overlay"></span>
+      <span class="glow glow-one"></span>
+      <span class="glow glow-two"></span>
+      <span class="glow glow-three"></span>
+    </div>
 
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <!-- Navigation -->
+    <header class="site-header" id="top">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <!-- Logo and Name -->
-
-          <a class="navbar-brand brand" href="index.html">
-            <img
-              src="images/logo.png"
-              alt="Brigitte Morta logo"
-              class="brand-logo"
-            />
-
-            <span class="brand-text">
-              <span class="brand-name"> Brigitte Morta </span>
-
-              <span class="brand-role">
-                Aspiring Full-Stack Web Developer
-              </span>
+          <a
+            class="navbar-brand brand"
+            href="#home"
+            aria-label="Brigitte Morta home"
+          >
+            <img src="images/logo.png" alt="BM logo" class="brand-logo" />
+            <span class="brand-copy">
+              <span class="brand-name">Brigitte Morta</span>
+              <span class="brand-role">Full-Stack Web Developer</span>
             </span>
           </a>
 
-          <!-- Mobile Burger Button -->
+          <div class="nav-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              type="button"
+              aria-label="Switch to light mode"
+              title="Switch to light mode"
+            >
+              <i class="bi bi-sun-fill" id="themeIcon"></i>
+            </button>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavigation"
-            aria-controls="mainNavigation"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navigation Links -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavigation"
+              aria-controls="mainNavigation"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
           <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item">
-                <a class="nav-link" href="#about"> About </a>
+                <a class="nav-link active" href="#home">Home</a>
               </li>
-
               <li class="nav-item">
-                <a class="nav-link" href="#skills"> Skills </a>
+                <a class="nav-link" href="#about">About</a>
               </li>
-
               <li class="nav-item">
-                <a class="nav-link" href="#projects"> Projects </a>
+                <a class="nav-link" href="#skills">Stack</a>
               </li>
-
               <li class="nav-item">
-                <a class="nav-link" href="#contact"> Contact </a>
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-contact" href="#contact"
+                  >Let's Talk <i class="bi bi-arrow-up-right"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -96,76 +126,50 @@
     </header>
 
     <main>
-      <!-- =====================================================
-             HERO SECTION
-        ====================================================== -->
-
-      <section class="hero">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <!-- Profile Image -->
-
-            <div class="col-lg-5 order-1 order-lg-2">
-              <div class="profile-glow">
-                <img
-                  src="images/profile.jpg"
-                  alt="Brigitte Morta"
-                  class="profile-image"
-                />
+      <!-- Hero -->
+      <section class="hero section-space" id="home">
+        <div class="container position-relative">
+          <div class="hero-grid">
+            <div class="hero-content reveal">
+              <div class="availability-pill">
+                <span class="status-dot"></span>
+                Open to opportunities
               </div>
-            </div>
 
-            <!-- Hero Content -->
+              <p class="eyebrow">HELLO, I'M BRIGITTE</p>
 
-            <div class="col-lg-7 order-2 order-lg-1">
-              <p class="hero-intro">HELLO, I'M BRIGITTE</p>
+              <h1>
+                I build
+                <span class="gradient-text">modern web experiences.</span>
+              </h1>
 
-              <h1 class="hero-title">Aspiring Full-Stack Web Developer</h1>
-
-              <p class="hero-description">
-                I am a graduate of BSIT and BSREM with a growing passion for web
-                development, design, and technology. I enjoy combining technical
-                knowledge with creativity to build useful and user-friendly
-                digital experiences.
+              <p class="hero-lead">
+                Full-Stack Web Developer focused on creating responsive,
+                practical, and user-centered web applications from interface to
+                functionality.
               </p>
 
-              <!-- Hero Button -->
-
-              <div class="hero-buttons">
+              <div class="hero-actions">
                 <a href="#projects" class="btn primary-btn">
-                  View My Projects
+                  View My Work
+                  <i class="bi bi-arrow-down-right"></i>
                 </a>
+                <a href="#contact" class="btn secondary-btn"> Let's Connect </a>
               </div>
 
-              <!-- Social Media -->
+              <div class="hero-meta">
+                <div class="meta-item">
+                  <span class="meta-label">BASED IN</span>
+                  <strong>Davao City, PH</strong>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                  <span class="meta-label">FOCUS</span>
+                  <strong>Full-Stack Development</strong>
+                </div>
+              </div>
 
               <div class="social-links">
-                <!-- Facebook -->
-
-                <a
-                  href="https://www.facebook.com/bri.gitte0604"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  title="Facebook"
-                >
-                  <i class="bi bi-facebook"></i>
-                </a>
-
-                <!-- LinkedIn -->
-
-                <a
-                  href="https://www.linkedin.com/in/brigittemorta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  title="LinkedIn"
-                >
-                  <i class="bi bi-linkedin"></i>
-                </a>
-
-                <!-- GitHub -->
-
                 <a
                   href="https://github.com/Bmorta"
                   target="_blank"
@@ -175,9 +179,24 @@
                 >
                   <i class="bi bi-github"></i>
                 </a>
-
-                <!-- Email -->
-
+                <a
+                  href="https://www.linkedin.com/in/brigittemorta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/bri.gitte0604"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  title="Facebook"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
                 <a
                   href="mailto:brigittemorta@gmail.com"
                   aria-label="Email"
@@ -187,451 +206,889 @@
                 </a>
               </div>
             </div>
+
+            <div class="hero-visual reveal reveal-delay">
+              <div class="code-orbit orbit-one"></div>
+              <div class="code-orbit orbit-two"></div>
+
+              <div class="profile-frame">
+                <div class="profile-glow"></div>
+                <div class="profile-grid"></div>
+                <img
+                  src="images/profile.jpg"
+                  alt="Brigitte Morta"
+                  class="profile-image"
+                />
+              </div>
+
+              <div class="floating-card card-top">
+                <span class="floating-icon"
+                  ><i class="bi bi-code-slash"></i
+                ></span>
+                <div>
+                  <small>BUILD</small>
+                  <strong>Clean & Responsive</strong>
+                </div>
+              </div>
+
+              <div class="floating-card card-bottom">
+                <span class="floating-icon purple"
+                  ><i class="bi bi-layers"></i
+                ></span>
+                <div>
+                  <small>STACK</small>
+                  <strong>Frontend → Backend</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-cue" aria-hidden="true">
+            <span></span>
+            Scroll to explore
           </div>
         </div>
       </section>
 
-      <!-- =====================================================
-             ABOUT SECTION
-        ====================================================== -->
-
-      <section id="about" class="about-section">
+      <!-- About -->
+      <section class="section-space about-section" id="about">
         <div class="container">
-          <div class="row align-items-start g-4">
-            <!-- Heading -->
-
-            <div class="col-lg-4">
-              <p class="section-label">ABOUT ME</p>
-
-              <h2 class="section-title">A little about me</h2>
-
-              <p class="about-education">BSIT • BSREM</p>
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">ABOUT ME</p>
+              <h2>
+                Technology meets
+                <span class="gradient-text">real-world problem solving.</span>
+              </h2>
             </div>
-
-            <!-- About Text -->
-
-            <div class="col-lg-4">
-              <p>
-                I am a graduate of
-                <strong>
-                  Bachelor of Science in Information Technology (BSIT)
-                </strong>
-                and
-                <strong>
-                  Bachelor of Science in Real Estate Management (BSREM) </strong
-                >.
-              </p>
-
-              <p>
-                With a background in both technology and real estate, I have
-                developed a combination of technical, creative, and
-                administrative skills.
-              </p>
-            </div>
-
-            <!-- More About Text -->
-
-            <div class="col-lg-4">
-              <p>
-                I have a growing foundation in programming and web development,
-                including HTML, CSS, JavaScript, Bootstrap, and Git/GitHub.
-              </p>
-
-              <p>
-                I also enjoy design and administrative work, including creating
-                clean layouts, organizing information, managing documents,
-                handling data, coordinating tasks, and maintaining records.
-              </p>
-            </div>
-          </div>
-
-          <!-- Goal -->
-
-          <div class="about-goal">
-            <span class="goal-icon"> &lt;/&gt; </span>
-
             <p>
-              I am currently continuing my journey in
-              <strong> Full-Stack Web Development </strong>
-              with MST Connect PH. My goal is to combine my knowledge in
-              technology, design, real estate, and administration to become a
-              versatile developer who can contribute to both technical and
-              business-oriented projects.
+              A developer with a background that combines information
+              technology, real estate, administration, and visual design.
             </p>
           </div>
-        </div>
-      </section>
 
-      <!-- =====================================================
-             SKILLS SECTION
-        ====================================================== -->
+          <div class="about-grid">
+            <article class="about-main glass-card reveal">
+              <div class="card-kicker">01 / PROFILE</div>
+              <h3>Building with purpose, not just code.</h3>
+              <p>
+                I am a graduate of Bachelor of Science in Information Technology
+                and Bachelor of Science in Real Estate Management. My background
+                has given me both a technical foundation and an understanding of
+                how digital tools support real business needs.
+              </p>
+              <p>
+                I am continuing my Full-Stack Web Development journey with MST
+                Connect PH, strengthening my ability to work across the frontend
+                and backend of web applications.
+              </p>
+              <p>
+                I value clean interfaces, organized code, responsive layouts,
+                and solutions that are practical for the people who use them.
+              </p>
+            </article>
 
-      <section id="skills" class="section">
-        <div class="container">
-          <p class="section-label">SKILLS</p>
-
-          <h2 class="section-title">What I can do</h2>
-
-          <p class="section-description">
-            A combination of technical, creative, and organizational skills that
-            I continue to develop.
-          </p>
-
-          <div class="row g-4 mt-2">
-            <!-- Programming -->
-
-            <div class="col-lg-4">
-              <article class="skill-category">
-                <div class="skill-category-header">
-                  <span class="category-icon"> &lt;/&gt; </span>
-
-                  <div>
-                    <span class="skill-number"> 01 </span>
-
-                    <h3>Programming</h3>
-                  </div>
+            <div class="about-side">
+              <article class="mini-card reveal reveal-delay">
+                <span class="mini-icon"
+                  ><i class="bi bi-mortarboard-fill"></i
+                ></span>
+                <div>
+                  <span class="mini-label">EDUCATION</span>
+                  <h4>BSIT • BSREM</h4>
+                  <p>Technology + Real Estate Management</p>
                 </div>
-
-                <ul class="skill-list">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>JavaScript</li>
-                  <li>Bootstrap</li>
-                  <li>Git &amp; GitHub</li>
-                  <li>Responsive Web Development</li>
-                </ul>
               </article>
-            </div>
 
-            <!-- Design -->
-
-            <div class="col-lg-4">
-              <article class="skill-category">
-                <div class="skill-category-header">
-                  <span class="category-icon"> ✦ </span>
-
-                  <div>
-                    <span class="skill-number"> 02 </span>
-
-                    <h3>Design</h3>
-                  </div>
+              <article class="mini-card reveal reveal-delay-2">
+                <span class="mini-icon"><i class="bi bi-braces"></i></span>
+                <div>
+                  <span class="mini-label">CURRENT FOCUS</span>
+                  <h4>Full-Stack Development</h4>
+                  <p>Frontend, backend, APIs, databases & deployment</p>
                 </div>
-
-                <ul class="skill-list">
-                  <li>Web Layout Design</li>
-                  <li>Responsive Design</li>
-                  <li>UI Design</li>
-                  <li>Visual Presentation</li>
-                  <li>Typography &amp; Spacing</li>
-                  <li>User-Friendly Interfaces</li>
-                </ul>
               </article>
-            </div>
 
-            <!-- Administrative -->
-
-            <div class="col-lg-4">
-              <article class="skill-category">
-                <div class="skill-category-header">
-                  <span class="category-icon"> ✓ </span>
-
-                  <div>
-                    <span class="skill-number"> 03 </span>
-
-                    <h3>Administrative</h3>
-                  </div>
+              <article class="mini-card reveal reveal-delay-3">
+                <span class="mini-icon"
+                  ><i class="bi bi-lightning-charge-fill"></i
+                ></span>
+                <div>
+                  <span class="mini-label">APPROACH</span>
+                  <h4>Learn → Build → Improve</h4>
+                  <p>Turning concepts into practical web projects</p>
                 </div>
-
-                <ul class="skill-list">
-                  <li>Document Management</li>
-                  <li>Data Organization</li>
-                  <li>Record Keeping</li>
-                  <li>Data Entry</li>
-                  <li>Task Coordination</li>
-                  <li>Attention to Detail</li>
-                </ul>
               </article>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =====================================================
-             PROJECTS SECTION
-        ====================================================== -->
-
-      <section id="projects" class="section projects-section">
+      <!-- Stack -->
+      <section class="section-space stack-section" id="skills">
         <div class="container">
-          <p class="section-label">PROJECTS</p>
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">TECHNICAL STACK</p>
+              <h2>Tools I use to <span class="gradient-text">build.</span></h2>
+            </div>
+            <p>
+              A growing development toolkit covering the core technologies I use
+              while building toward full-stack capability.
+            </p>
+          </div>
 
-          <h2 class="section-title">Selected work</h2>
-
-          <p class="section-description">
-            A growing collection of projects that show what I am currently
-            building and learning.
-          </p>
-
-          <div class="row g-4 mt-2">
-            <!-- Project 1 -->
-
-            <div class="col-md-6 col-lg-4">
-              <article class="project-card">
-                <div class="project-preview">
+          <div class="stack-grid">
+            <article class="stack-card featured reveal">
+              <div class="stack-card-top">
+                <span class="stack-icon"
+                  ><i class="bi bi-window-stack"></i
+                ></span>
+                <span class="stack-index">01</span>
+              </div>
+              <h3>Frontend</h3>
+              <p>
+                Responsive interfaces with clean structure and thoughtful visual
+                design.
+              </p>
+              <div class="tech-icon-grid">
+                <div class="tech-icon">
                   <img
-                    src="images/portfolio-preview.png"
-                    alt="Screenshot of my personal portfolio website"
+                    src="https://skillicons.dev/icons?i=html"
+                    alt="HTML5"
+                  /><span>HTML5</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=css"
+                    alt="CSS3"
+                  /><span>CSS3</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=js"
+                    alt="JavaScript"
+                  /><span>JavaScript</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=bootstrap"
+                    alt="Bootstrap"
+                  /><span>Bootstrap</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-phone"></i><span>Responsive UI</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-card reveal reveal-delay">
+              <div class="stack-card-top">
+                <span class="stack-icon purple"
+                  ><i class="bi bi-server"></i
+                ></span>
+                <span class="stack-index">02</span>
+              </div>
+              <h3>Backend & Programming</h3>
+              <p>
+                Building the foundation for applications beyond the interface.
+              </p>
+              <div class="tech-icon-grid">
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=nodejs"
+                    alt="Node.js"
+                  /><span>Node.js</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=php"
+                    alt="PHP"
+                  /><span>PHP</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=laravel"
+                    alt="Laravel"
+                  /><span>Laravel</span>
+                </div>
+                <div class="tech-icon">
+                  <img src="https://skillicons.dev/icons?i=cs" alt="C#" /><span
+                    >C#</span
+                  >
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=dotnet"
+                    alt=".NET"
+                  /><span>.NET</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-plug"></i><span>APIs</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-hdd-stack"></i
+                  ><span>Server-side Concepts</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-shield-lock"></i><span>Authentication</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-card reveal reveal-delay-2">
+              <div class="stack-card-top">
+                <span class="stack-icon"><i class="bi bi-database"></i></span>
+                <span class="stack-index">03</span>
+              </div>
+              <h3>Databases</h3>
+              <p>
+                Learning how to structure, store, and work with application
+                data.
+              </p>
+              <div class="tech-icon-grid">
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=mongodb"
+                    alt="MongoDB"
+                  /><span>MongoDB</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=mysql"
+                    alt="MySQL"
+                  /><span>MySQL</span>
+                </div>
+                <!-- <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=postgres"
+                    alt="PostgreSQL"
+                  /><span>PostgreSQL</span>
+                </div> -->
+                <div class="tech-icon">
+                  <i class="bi bi-database-check"></i><span>SQL</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-card reveal">
+              <div class="stack-card-top">
+                <span class="stack-icon purple"><i class="bi bi-git"></i></span>
+                <span class="stack-index">04</span>
+              </div>
+              <h3>Tools & Workflow</h3>
+              <p>
+                Organized development workflows for building and maintaining
+                projects.
+              </p>
+              <div class="tech-icon-grid">
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=git"
+                    alt="Git"
+                  /><span>Git</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="GitHub"
+                  /><span>GitHub</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=vscode"
+                    alt="VS Code"
+                  /><span>VS Code</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=bootstrap"
+                    alt="Bootstrap"
+                  /><span>Bootstrap</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=wordpress"
+                    alt="WordPress"
+                  /><span>WordPress</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-globe2"></i><span>GitHub Pages</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-card reveal reveal-delay">
+              <div class="stack-card-top">
+                <span class="stack-icon purple"
+                  ><i class="bi bi-briefcase"></i
+                ></span>
+                <span class="stack-index">05</span>
+              </div>
+              <h3>Administration & Business</h3>
+              <p>
+                Administrative, organizational, and business skills that support
+                practical digital solutions.
+              </p>
+              <div class="tech-icon-grid">
+                <div class="tech-icon">
+                  <i class="bi bi-person-workspace"></i
+                  ><span>Administration</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-clipboard-data"></i
+                  ><span>Data Organization</span>
+                </div>
+                <div class="tech-icon">
+                  <i class="bi bi-file-earmark-text"></i
+                  ><span>Documentation</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="https://cdn.simpleicons.org/google/4285F4"
+                    alt="Google Apps"
+                  /><span>Google Apps</span>
+                </div>
+                <div class="tech-icon">
+                  <img
+                    src="./images/microsoft.png"
+                    alt="Microsoft Office"
+                  /><span>Microsoft Office</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="stack-card reveal reveal-delay-2">
+              <div class="stack-card-top">
+                <span class="stack-icon"
+                  ><i class="bi bi-palette-fill"></i
+                ></span>
+                <span class="stack-index">06</span>
+              </div>
+              <h3>Design & Content</h3>
+              <p>
+                Visual and content tools that support clear, polished digital
+                work.
+              </p>
+              <div class="tech-icon-grid">
+                <div class="tech-icon">
+                  <img
+                    src="https://skillicons.dev/icons?i=ps"
+                    alt="Photoshop"
                   />
+                  <span>Photoshop</span>
                 </div>
 
-                <span class="project-number"> 01 </span>
+                <div class="tech-icon">
+                  <img src="./images/canva.png" alt="Canva" />
+                  <span>Canva</span>
+                </div>
 
-                <h3>Personal Portfolio</h3>
+                <div class="tech-icon">
+                  <img src="./images/capcut.jpg" alt="CapCut" />
+                  <span>CapCut</span>
+                </div>
+              </div>
+            </article>
+          </div>
 
+          <div class="capability-strip reveal">
+            <span>ALSO BRINGING</span>
+            <div>
+              <span>UI Design</span>
+              <span>Graphic Design</span>
+              <span>Data Organization</span>
+              <span>Documentation</span>
+              <span>Business Context</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section-space projects-section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">SELECTED WORK</p>
+              <h2>
+                Projects that
+                <span class="gradient-text">show the process.</span>
+              </h2>
+            </div>
+            <p>
+              A curated look at what I have built and the technical direction I
+              am developing toward.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article
+              class="project-feature glass-card reveal project-clickable"
+              data-project-modal="portfolioProjectModal"
+              tabindex="0"
+              role="button"
+              aria-label="Open project preview for Brigitte Morta Portfolio"
+            >
+              <div class="project-image-wrap">
+                <img
+                  src="images/portfolio-preview.png"
+                  alt="Preview of Brigitte Morta's personal portfolio website"
+                />
+                <div class="project-overlay">
+                  <span>LIVE PROJECT</span>
+                </div>
+              </div>
+
+              <div class="project-info">
+                <div class="project-number">01</div>
+                <p class="project-type">PERSONAL PORTFOLIO • WEB DEVELOPMENT</p>
+                <h3>Brigitte Morta — Portfolio</h3>
                 <p>
-                  A responsive personal portfolio built with semantic HTML,
-                  Bootstrap, custom CSS, and responsive design.
+                  A responsive portfolio designed to present my development
+                  work, technical stack, professional background, and contact
+                  information through a polished, modern interface.
                 </p>
 
-                <div class="project-tech">
-                  <span>HTML</span>
-                  <span>CSS</span>
+                <div class="project-tech large">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
                   <span>Bootstrap</span>
+                  <span>GitHub Pages</span>
                 </div>
 
-                <div class="project-buttons">
+                <div class="project-actions">
                   <a
-                    href="https://github.com/Bmorta/capstone1"
+                    href="https://github.com/Bmorta/brigitte-morta"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn primary-btn"
                   >
-                    GitHub
+                    View Repository <i class="bi bi-github"></i>
                   </a>
-
                   <a
-                    href="https://bmorta.github.io/capstone1/"
+                    href="https://bmorta.github.io/brigitte-morta/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn secondary-btn"
+                    class="text-link"
                   >
-                    Live Demo
+                    Live Demo <i class="bi bi-arrow-up-right"></i>
                   </a>
                 </div>
-              </article>
-            </div>
+              </div>
+            </article>
 
-            <!-- Project 2 -->
-
-            <div class="col-md-6 col-lg-4">
-              <article class="project-card">
-                <div class="project-preview project-placeholder">
-                  <span> Future Project </span>
+            <article
+              class="project-feature glass-card reveal project-clickable"
+              data-project-modal="inventoryProjectModal"
+              tabindex="0"
+              role="button"
+              aria-label="Open project preview for Inventory Management System"
+            >
+              <div class="project-image-wrap">
+                <img
+                  src="images/inventory-management-preview.png"
+                  alt="Preview of Inventory Management System"
+                />
+                <div class="project-overlay">
+                  <span>PROJECT</span>
                 </div>
+              </div>
 
-                <span class="project-number"> 02 </span>
-
-                <h3>Future Project</h3>
-
+              <div class="project-info">
+                <div class="project-number">02</div>
+                <p class="project-type">
+                  INVENTORY MANAGEMENT • WEB APPLICATION
+                </p>
+                <h3>Inventory Management System</h3>
                 <p>
-                  Replace this card with your next project. Describe what you
-                  built, the technologies you used, and what you learned.
+                  A web-based inventory management project focused on organizing
+                  products, tracking stock information, and presenting inventory
+                  data through a practical interface.
                 </p>
 
-                <div class="project-tech">
-                  <span> Coming Soon </span>
+                <div class="project-tech large">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>Bootstrap</span>
                 </div>
 
-                <div class="project-buttons">
-                  <a href="#" class="btn secondary-btn"> Repository </a>
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/Bmorta/inventory-management-system"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn primary-btn"
+                  >
+                    View Repository <i class="bi bi-github"></i>
+                  </a>
+                  <a
+                    href="https://bmorta.github.io/inventory-management-system/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                  >
+                    Live Demo <i class="bi bi-arrow-up-right"></i>
+                  </a>
                 </div>
+              </div>
+            </article>
+          </div>
 
-                <small> Repository and live demo links coming soon. </small>
-              </article>
+          <!-- Mini Projects -->
+          <div class="mini-projects-section reveal">
+            <div class="mini-projects-heading">
+              <span class="note-line"></span>
+              <div>
+                <p class="eyebrow">MINI PROJECTS</p>
+                <h3>Smaller builds, practical lessons.</h3>
+              </div>
             </div>
 
-            <!-- Project 3 -->
-
-            <div class="col-md-6 col-lg-4">
-              <article class="project-card">
-                <div class="project-preview project-placeholder">
-                  <span> Future Project </span>
-                </div>
-
-                <span class="project-number"> 03 </span>
-
-                <h3>Future Project</h3>
-
+            <div class="mini-projects-grid">
+              <article class="mini-project-card">
+                <span class="mini-project-icon"
+                  ><i class="bi bi-check2-square"></i
+                ></span>
+                <p class="project-type">TASK MANAGEMENT · WEB APPLICATION</p>
+                <h3>Task Manager Application</h3>
                 <p>
-                  Add another project here to show your progress with
-                  JavaScript, backend development, or other technologies.
+                  A responsive task management application with CRUD
+                  functionality, task completion, clearing completed tasks, and
+                  custom confirmation popups.
                 </p>
-
                 <div class="project-tech">
-                  <span> Coming Soon </span>
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span
+                  ><span>JSON</span><span>LocalStorage</span>
                 </div>
-
-                <div class="project-buttons">
-                  <a href="#" class="btn secondary-btn"> Repository </a>
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/Bmorta/task-manager-application"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                    >Repository <i class="bi bi-github"></i
+                  ></a>
+                  <a
+                    href="https://bmorta.github.io/task-manager-application/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                    >Live Demo <i class="bi bi-arrow-up-right"></i
+                  ></a>
                 </div>
-
-                <small> Repository and live demo links coming soon. </small>
               </article>
+
+              <article class="mini-project-card">
+                <span class="mini-project-icon"
+                  ><i class="bi bi-person-vcard"></i
+                ></span>
+                <p class="project-type">STUDENT RECORD · WEB APPLICATION</p>
+                <h3>Student Record Application</h3>
+                <p>
+                  A student record application developed as part of my
+                  Full-Stack Web Development training.
+                </p>
+                <div class="project-tech">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span
+                  ><span>DOM</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="https://github.com/Bmorta/student-record-application"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                    >Repository <i class="bi bi-github"></i
+                  ></a>
+                  <a
+                    href="https://bmorta.github.io/student-record-application/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                    >Live Demo <i class="bi bi-arrow-up-right"></i
+                  ></a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="project-note reveal">
+            <span class="note-line"></span>
+            <p>
+              More projects will appear here as I continue building full-stack
+              applications.
+            </p>
+          </div>
+
+          <!-- Project Preview Modal -->
+          <div
+            class="modal fade project-modal"
+            id="portfolioProjectModal"
+            tabindex="-1"
+            aria-labelledby="portfolioProjectModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div>
+                    <p class="eyebrow mb-1">PROJECT PREVIEW</p>
+                    <h3 class="modal-title" id="portfolioProjectModalLabel">
+                      Brigitte Morta — Portfolio
+                    </h3>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close project preview"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="project-modal-image-wrap">
+                    <img
+                      src="images/portfolio-preview.png"
+                      alt="Full preview of Brigitte Morta's personal portfolio website"
+                    />
+                  </div>
+                  <div class="project-modal-details">
+                    <p>
+                      Responsive personal portfolio built to present my
+                      development work, technical stack, professional
+                      background, and contact information.
+                    </p>
+                    <div class="project-tech large">
+                      <span>HTML5</span>
+                      <span>CSS3</span>
+                      <span>JavaScript</span>
+                      <span>Bootstrap</span>
+                      <span>GitHub Pages</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="https://github.com/Bmorta/brigitte-morta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn primary-btn"
+                  >
+                    View Repository <i class="bi bi-github"></i>
+                  </a>
+                  <a
+                    href="https://bmorta.github.io/brigitte-morta/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                  >
+                    Open Live Site <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inventory Management System Preview Modal -->
+          <div
+            class="modal fade project-modal"
+            id="inventoryProjectModal"
+            tabindex="-1"
+            aria-labelledby="inventoryProjectModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div>
+                    <p class="eyebrow mb-1">PROJECT PREVIEW</p>
+                    <h3 class="modal-title" id="inventoryProjectModalLabel">
+                      Inventory Management System
+                    </h3>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close project preview"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="project-modal-image-wrap">
+                    <img
+                      src="images/inventory-management-preview.png"
+                      alt="Full preview of Inventory Management System"
+                    />
+                  </div>
+                  <div class="project-modal-details">
+                    <p>
+                      Web-based inventory management project focused on
+                      organizing products, tracking stock information, and
+                      presenting inventory data through a practical interface.
+                    </p>
+                    <div class="project-tech large">
+                      <span>HTML5</span>
+                      <span>CSS3</span>
+                      <span>JavaScript</span>
+                      <span>Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="https://github.com/Bmorta/inventory-management-system"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn primary-btn"
+                  >
+                    View Repository <i class="bi bi-github"></i>
+                  </a>
+                  <a
+                    href="https://bmorta.github.io/inventory-management-system/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link"
+                  >
+                    Open Live Site <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =====================================================
-             CONTACT SECTION
-        ====================================================== -->
-
-      <section id="contact" class="section contact-section">
+      <!-- Contact -->
+      <section class="section-space contact-section" id="contact">
         <div class="container">
-          <div class="row g-5">
-            <!-- Contact Information -->
-
-            <div class="col-lg-5">
-              <p class="section-label">CONTACT</p>
-
-              <h2 class="section-title">Let's connect</h2>
-
-              <p class="contact-description">
-                If you would like to get in touch with me, feel free to send a
-                message using the form.
+          <div class="contact-grid">
+            <div class="contact-copy reveal">
+              <p class="eyebrow">GET IN TOUCH</p>
+              <h2>
+                Let's build something <span class="gradient-text">useful.</span>
+              </h2>
+              <p>
+                I'm interested in opportunities where I can contribute, learn,
+                and grow as a full-stack web developer.
               </p>
 
-              <p class="contact-email">
-                <i class="bi bi-envelope-fill"></i>
-
-                <a href="mailto:brigittemorta@gmail.com">
-                  brigittemorta@gmail.com
-                </a>
-              </p>
+              <a href="mailto:brigittemorta@gmail.com" class="contact-email">
+                <span class="contact-icon"
+                  ><i class="bi bi-envelope-fill"></i
+                ></span>
+                <span>
+                  <small>EMAIL ME</small>
+                  <strong>brigittemorta@gmail.com</strong>
+                </span>
+              </a>
             </div>
 
-            <!-- Contact Form -->
-
-            <div class="col-lg-7">
-              <form class="contact-form">
-                <div class="mb-3">
-                  <label for="name" class="form-label"> Name </label>
-
+            <form
+              class="contact-form glass-card reveal reveal-delay"
+              id="contactForm"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    class="form-control"
                     placeholder="Your name"
                     required
                   />
                 </div>
 
-                <div class="mb-3">
-                  <label for="email" class="form-label"> Email </label>
-
+                <div class="form-group">
+                  <label for="email">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    class="form-control"
-                    placeholder="your@email.com"
+                    placeholder="you@example.com"
                     required
                   />
                 </div>
+              </div>
 
-                <div class="mb-3">
-                  <label for="message" class="form-label"> Message </label>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me about your project or opportunity..."
+                  required
+                ></textarea>
+              </div>
 
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    class="form-control"
-                    placeholder="Write your message..."
-                    required
-                  ></textarea>
-                </div>
+              <button type="submit" class="btn primary-btn w-100">
+                Send Message <i class="bi bi-arrow-up-right"></i>
+              </button>
 
-                <button type="submit" class="btn primary-btn">
-                  Send Message
-                </button>
-              </form>
-            </div>
+              <p class="form-note">
+                This form is currently a front-end interface. Email me directly
+                for now.
+              </p>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-content">
-          <!-- Footer Brand -->
+        <div class="footer-main">
+          <a href="#top" class="footer-brand">
+            <img src="images/logo.png" alt="BM logo" />
+            <span>Brigitte Morta</span>
+          </a>
 
-          <div class="footer-brand">
-            <img
-              src="images/logo.png"
-              alt="Brigitte Morta logo"
-              class="footer-logo"
-            />
+          <p>Designed & built with purpose.</p>
 
-            <p>&copy; 2026 Brigitte Morta. All rights reserved.</p>
-          </div>
-
-          <!-- Footer Social Icons -->
-
-          <div class="footer-links">
-            <a
-              href="https://www.facebook.com/bri.gitte0604"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              title="Facebook"
-            >
-              <i class="bi bi-facebook"></i>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/brigittemorta"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              title="LinkedIn"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
-
+          <div class="footer-socials">
             <a
               href="https://github.com/Bmorta"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              title="GitHub"
-            >
-              <i class="bi bi-github"></i>
-            </a>
-
+              ><i class="bi bi-github"></i
+            ></a>
             <a
-              href="mailto:brigittemorta@gmail.com"
-              aria-label="Email"
-              title="Email"
-            >
-              <i class="bi bi-envelope-fill"></i>
-            </a>
+              href="https://www.linkedin.com/in/brigittemorta"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="mailto:brigittemorta@gmail.com" aria-label="Email"
+              ><i class="bi bi-envelope-fill"></i
+            ></a>
           </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Brigitte Morta. All rights reserved.</span>
+          <span>Full-Stack Web Developer</span>
         </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JavaScript -->
-
+    <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
   </body>
 </html>
